@@ -1,0 +1,111 @@
+import random
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+word = ["bad","good","ugly","way","cold","skay", "name"]
+#choice...
+random_word = random.choice(word)
+#frage......
+
+display = ["_"]*len(random_word)
+
+print(" ".join(display))
+lives = 6
+
+guessed_letters = []
+
+print(HANGMANPICS[0])
+#while,,,,
+while "_" in display and lives>0:
+    #frage-----
+    
+    guessed = input("pleas guess a letter:").lower()
+    
+    
+    
+    
+    if guessed in guessed_letters:
+        print("you already guessed that, try again")
+        print(f"you have {lives}more tries")
+        
+        continue
+    
+    guessed_letters.append(guessed)
+    #lives...
+    if guessed not in random_word:
+        lives -=1
+        print(HANGMANPICS[6-lives])
+        print(f"you have {lives}more tries")
+    #distance with liste...
+    else:
+        for position in range(len(random_word)):
+            if  random_word[position] == guessed:
+                display [position] = guessed
+        
+            
+        print(" ".join(display))
+        print(f"you have {lives}more tries")
+    
+ 
+        
+if lives == 0:
+    print("+++++you lose+++++")
+    
+
+else:
+    print("""
+++++++you win+++++
+""")  
+
+    
+    
+    
+        
