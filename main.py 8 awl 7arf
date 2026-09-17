@@ -1,0 +1,24 @@
+namee=[]
+
+ 
+ 
+ 
+names = input("enter the first end the last name of your friend sperated  by a comma:").split(", ")
+for x in names:
+    name_x = x.split()
+    print(name_x)
+
+    first_name = name_x[0]
+    last_name = name_x[1]
+
+    first_inisial = first_name[0]
+    last_inisial = last_name[0]
+    wow = first_inisial+ "."+last_inisial
+    namee.append(wow)
+print("abbreviated names:")
+for i in namee:
+    
+ print(i)
+
+
+

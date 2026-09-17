@@ -1,0 +1,36 @@
+from turtle import Turtle, Screen
+import random
+
+
+sam=Turtle()
+window=Screen()
+list_shape = ["turtle","square","triangle","circle","arrow"]
+list_sizes = [2,4,6,8,10,12,14]
+list_colors = ["green","purple","orange","red","black","blue","yellow","gray"]
+sam.speed("slowest")
+
+
+
+
+
+def squire():
+    for _ in range(4):
+        sam.color(random.choice(list_colors))
+        sam.pensize(random.choice(list_sizes))
+        sam.shape(random.choice(list_shape))
+        sam.forward(200)
+        sam.left(-90)
+        
+   
+
+
+
+
+squire()
+
+
+window.exitonclick()
+
+
+
+

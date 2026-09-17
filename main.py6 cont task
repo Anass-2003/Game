@@ -1,0 +1,31 @@
+cont = input("pleas type the names of the contries separated by a comas:\n ").split(", ")
+print()
+
+for name in cont:
+    print(f"\n{name}\n")
+    
+    ent_1=input(f"have you ever visited {name} before? (yes /no):").lower()
+    if ent_1 == "yes":
+        print("I hope you had a wonderful time ('____')\n")
+        print("------")
+    else:
+        print("I hope you get to visit it soon ('-')")
+        print("------")
+input("Press enter to exit....")
+today= input("enter you task for today separated by a comas:").split(", ")
+for task in today:
+    print(f"\n{task}\n")
+    ent = input("did you finish watering the plants alredy? (yes/no):").lower()
+    if ent ==  "yes":
+        print("Nice Job")
+    else:
+        print("try not to put is off")
+ent_1 = input("do you want to see you today's progress? (yes/np)")
+    
+    
+    
+    
+    
+    
+    
+    
